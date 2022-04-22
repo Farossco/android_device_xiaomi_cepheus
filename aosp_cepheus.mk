@@ -17,17 +17,18 @@
 # Release name
 PRODUCT_RELEASE_NAME := cepheus
 
-$(call inherit-product, build/target/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cepheus
-PRODUCT_NAME := omni_cepheus
+PRODUCT_NAME := aosp_cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
+TARGET_SUPPORTS_64_BIT_APPS := false
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
