@@ -40,7 +40,7 @@ Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch omni_cepheus-eng
+lunch aosp_cepheus-eng
 mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
 ```
 
